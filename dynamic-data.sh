@@ -17,8 +17,8 @@ privateIp
 ramdiskId
 region
 version"
-read filter
-#echo $filter
-python -c "import sys, json; print(json.load(sys.stdin)['$filter'])"  < meta.json
-#jq --arg v "$filter" '.[$v]' meta.json
+read look
+echo $look
+python -c "import sys, json; print(json.load(sys.stdin)['$look'])"  < meta.json
+#jq --arg v "$look" '.[$v]' meta.json
 rm -rf meta.json
