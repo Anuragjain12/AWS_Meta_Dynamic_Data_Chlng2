@@ -31,13 +31,13 @@ for i in list_1:
 #print(res_dict)
 os.system("cat insta.json | jq -r")
 print("\n")
-print(res.content)
+#print(res.content)
+print(res_dict.keys())
 print("\n")
 value = raw_input("Please enter a string from below list :\n")
 print('You entered: ' + value)
 #choice=aws_url+value
 #get_choice=requests.get(choice)
 #print(get_choice.content)
-
 print(res_dict[value]) 
  
